@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Objednavka</title>
+</head>
+
+<body>
+    <form>
+        <div class="container">
+            <div>
+                <select name="krmivo" id="krmivo">
+                    <option value="100" selected>Psí žrádlo 150 Kč/kg</option>
+                    <option value="120">Kočičí žrádlo 120 Kč/kg</option>
+                    <option value="50">Žrádlo pro rybičky 50 Kč/kg</option>
+                    <option value="800">Žrádlo pro tygra 800 Kč/kg</option>
+                </select>
+
+            </div>
+            <div>
+                <label for="kg">Počet kilogramů</label>
+                <input class="dop" type="number" name="kg" id="kg" min="0">
+            </div>
+            <div>
+                <label for="cena">Celková cena krmiva</label>
+                <input class="dop" type="text" name="cena" id="cena" readonly>
+            </div>
+        </div>
+
+        <fieldset>
+            <legend>Výběr volitelných vlastností krmiva:</legend>
+
+            <label for="bio">
+                <input type="checkbox" id="bio" value="30" class="inline checkbox">
+                Bio kvalita
+            </label>
+
+            <label for="extra-kvalita">
+                <input type="checkbox" id="extra-kvalita" value="50" class="inline checkbox">
+                Extra premium kvalita
+            </label>
+
+            <label for="extra-nekvalita">
+                <input type="checkbox" id="extra-nekvalita" value="-15" class="inline checkbox">
+                Extra nekvalita pro chudé
+            </label>
+
+            <label for="darkove">
+                <input type="checkbox" id="darkove" value="500" class="inline checkbox">
+                Dárkové balení (+500 Kč)
+            </label>
+            <legend>Vyber dopravy</legend>
+
+            <label for="osobni">
+                <input type="radio" id="osobni" name="doprava" value="0" class="inline">
+                Osobní odběr (bez příplatku)
+            </label>
+
+            <label for="kuryr">
+                <input type="radio" id="kuryr" name="doprava" value="10" class="inline">
+                Firemní kurýr
+            </label>
+
+            <label for="posta">
+                <input type="radio" id="posta" name="doprava" value="250" class="inline">
+                Česká pošta (+250 Kč)
+            </label>
+
+            <div>
+                <label for="vysledna-cena">Výsledná cena krmiva podle všech vybraných vlastností a typu dopravy:</label>
+                <input type="text" id="vysledna-cena" name="vysledna-cena" readonly>
+            </div>
+
+            <div>
+                <label for="castka">Částka k utracení:</label>
+                <input type="number" id="castka" name="castka" min="0">
+                <button type="button" id="overit">Ověřit</button>
+            </div>
+
+            <p id="vysledek"></p>
+
+        </fieldset>
+        <div class="email-container">
+            <div class="email-input">
+                <span>Jmeno</span>
+                <input type="text" id="email" name="email" required 
+                    title="Please enter a valid email address.">
+                <span>@gmail.com</span>
+                <button id="submit-button">Odeslat</button>
+                <p id="error-message"></p>
+            </div>
+        </div>
+
+    </form>
+    <script src="./script.js"></script>
+</body>
+
+</html>

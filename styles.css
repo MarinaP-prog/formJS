@@ -1,0 +1,141 @@
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+  
+
+
+  input {
+    font-size: 1rem;
+  }
+
+  h3::before {
+    content:  "Question #";
+  }
+ 
+  button{
+    display: block;
+  margin: 10px auto;
+  width: 40%;
+  padding: 15px;
+  font-size: 1.438rem;
+  background: #d0d0d5;
+  border: 3px solid #3b3b4f;
+  }
+ 
+  
+  body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: #5572ca;
+    color: #f5f6f7;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+  }
+  
+
+  form {
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+  }
+  
+  fieldset {
+    border: none;
+    padding: 1rem 0;
+    margin-top: 0.5rem;
+  }
+ 
+
+  .container {
+    display: flex;
+    gap: 5px; /* mezera mezi prvky */
+    align-items: flex-end; /* zarovná prvky na výšku */
+}
+
+.container div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Zmenšení inputů a selectu */
+.dop {
+    width: 20px;
+    min-width: 9rem;
+}
+
+  label {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  
+  input,
+  textarea,
+  select {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 1.5em;
+  }
+  
+  input, textarea {
+    background-color: #213981;
+    border: 1px solid #213981;
+    color: #ffffff;
+  }
+  
+  .inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+  }
+  
+  input[type="submit"] {
+    display: block;
+    width: 40%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #07071d;
+    border-color: black;
+    min-width: 20%;
+    border-radius: 5px;
+    position: absolute;
+  }
+ 
+  
+  .inline{
+    display: inline; 
+  } 
+  
+  .email-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.email-input {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    width: fit-content;
+}
+
+.email-input input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.email-input span {
+    margin: 5px;
+    font-size: 1rem;
+    color: #555;
+}
+legend{
+    color: #07071d;
+    font-size: 20px;
+}
