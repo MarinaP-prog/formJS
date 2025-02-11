@@ -81,7 +81,7 @@ document.addEventListener('change', ()=>{
     const email = regexJmeno.value;
 
     if (checkRegex.test(email)) {
-        errorMessage.textContent = "E-mail je platný.";
+        errorMessage.textContent = "";
     } else {
         errorMessage.textContent = "Neplatný e-mail. Ujistěte se, že jméno obsahuje pouze písmena a číslice.";
     }
